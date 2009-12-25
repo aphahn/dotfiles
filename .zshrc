@@ -23,6 +23,9 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt appendhistory autocd beep
+setopt histignoredups
+setopt histignorespace extended_history
+setopt inc_append_history share_history
 # End of lines configured by zsh-newuser-install
 
 # Some colors:
@@ -74,7 +77,6 @@ xterm*|rxvt*)
 esac
 
 export EDITOR=vim
-export SVN_EDITOR="vim --noplugin"
 export VISUAL=vim
 export GREP_OPTIONS="--color"
 
