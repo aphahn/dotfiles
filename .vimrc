@@ -35,3 +35,8 @@ map Y y$
 inoremap <C-Space> <C-X><C-O>
 let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 set pastetoggle=<F12>
+
+let local = '~/.vimrclocal'
+if filereadable(local)
+    source local
+endif
