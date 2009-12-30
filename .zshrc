@@ -86,3 +86,9 @@ alias la="ls -lA"
 alias lh="ls -lAh"
 alias top="top -s 1 -o cpu"
 alias rf="rm -rf"
+alias dl="curl -O"
+
+ZSHRCLOCAL=~/.zshrclocal
+if [[ -r $ZSHRCLOCAL ]]; then
+    source $ZSHRCLOCAL
+fi
