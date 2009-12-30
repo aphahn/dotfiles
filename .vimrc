@@ -39,7 +39,7 @@ let Tlist_Ctags_Cmd='/usr/local/bin/ctags'
 set pastetoggle=<F12>
 runtime macros/matchit.vim
 
-let local = '~/.vimrclocal'
-if filereadable(local)
-    source local
+let vimrclocal='/Users/adam/.vimrclocal'
+if filereadable(vimrclocal)
+    exec 'source ' . vimrclocal
 endif
