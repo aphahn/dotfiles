@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
 import os
+import sys
+
+# Work from wherever we're called
+os.chdir(sys.path[0])
 
 for filename in os.listdir('.'):
     if filename.startswith('.') and not filename.endswith('.swp'):
