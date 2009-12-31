@@ -17,6 +17,7 @@ set number
 set mouse=a
 set bs=2
 set formatoptions=tcrqn
+set wildmenu
 set wildmode=list:longest
 set cursorline
 nnoremap <C-K> <C-Y>
