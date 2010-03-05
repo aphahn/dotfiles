@@ -20,6 +20,7 @@ set formatoptions=tcrqn
 set wildmenu
 set wildmode=list:longest
 set cursorline
+set vb
 nnoremap <C-K> <C-Y>
 nnoremap <C-J> <C-E>
 inoremap <C-J> <C-O><C-Y>
