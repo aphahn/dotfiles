@@ -76,6 +76,9 @@ xterm*|rxvt*)
     ;;
 esac
 
+autoload -U url-quote-magic
+zle -N self-insert url-quote-magic
+
 export EDITOR=vim
 export VISUAL=vim
 export GREP_OPTIONS="--color"
