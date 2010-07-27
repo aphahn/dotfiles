@@ -6,7 +6,9 @@ import sys
 # Work from wherever we're called
 os.chdir(sys.path[0])
 
-for filename in os.listdir('.'):
+possible_dotfiles = os.listdir('.') + ['.ssh/ssh_config']
+
+for filename in possible_dotfiles:
     if filename.startswith('.') and not filename.endswith('.swp'):
         symlink_name = os.path.expanduser('~/%s' % filename)
         if os.path.isfile(filename) and not os.path.exists(symlink_name):
