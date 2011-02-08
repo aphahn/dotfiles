@@ -82,6 +82,7 @@ zle -N self-insert url-quote-magic
 export EDITOR=vim
 export VISUAL=vim
 export GREP_OPTIONS="--color"
+export PATH=$PATH:"$HOME/bin"
 
 alias pgrep="pgrep -l"
 alias ls="ls -G"
