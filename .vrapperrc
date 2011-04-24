@@ -1,0 +1,10 @@
+set ignorecase
+set smartcase
+
+map Y y$
+
+inoremap <C-L> <Esc>
+
+nnoremap ; :
+nnoremap <C-J> <C-E>
+nnoremap <C-K> <C-Y>
