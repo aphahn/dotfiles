@@ -83,6 +83,7 @@ export EDITOR=vim
 export VISUAL=vim
 export GREP_OPTIONS="--color"
 export PATH=$PATH:"$HOME/bin"
+export LESS="-i -n -R"
 
 alias pgrep="pgrep -l"
 alias ls="ls -G"
@@ -91,7 +92,6 @@ alias lh="ls -lAh"
 alias top="top -s 1 -o cpu"
 alias rf="rm -rf"
 alias dl="curl -O"
-alias less="less -R"
 
 ZSHRCLOCAL=~/.zshrclocal
 if [[ -r $ZSHRCLOCAL ]]; then
