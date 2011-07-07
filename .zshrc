@@ -85,13 +85,14 @@ export GREP_OPTIONS="--color"
 export PATH=$PATH:"$HOME/bin"
 export LESS="-i -n -R"
 
-alias pgrep="pgrep -l"
 alias ls="ls -G"
 alias la="ls -lA"
-alias lh="ls -lAh"
-alias top="top -s 1 -o cpu"
+alias lh="la -h"
 alias rf="rm -rf"
+alias pgrep="pgrep -l"
 alias dl="curl -O"
+alias top="top -s 1 -o cpu"
+alias htop="htop -d 10"
 
 ZSHRCLOCAL=~/.zshrclocal
 if [[ -r $ZSHRCLOCAL ]]; then
