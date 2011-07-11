@@ -22,7 +22,7 @@ compinit -C
 HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-setopt appendhistory autocd beep
+setopt appendhistory autocd beep extendedglob
 setopt histignoredups
 setopt histignorespace extended_history
 setopt inc_append_history share_history
