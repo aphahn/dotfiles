@@ -3,7 +3,6 @@ set nocompatible
 set autoindent
 set bs=2
 set cindent
-set cursorline
 set expandtab
 set formatoptions=tcrqn
 set hidden
