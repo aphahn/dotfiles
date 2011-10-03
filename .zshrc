@@ -94,7 +94,7 @@ alias dl="curl -O"
 alias top="top -s 1 -o cpu"
 alias htop="htop -d 10"
 function ss () {
-    ssh -t $1 screen -d -R
+    ssh -t $1 screen -D -R
 }
 
 ZSHRCLOCAL=~/.zshrclocal
