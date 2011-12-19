@@ -1,7 +1,7 @@
 set nocompatible
 
 set autoindent
-set bs=2
+set backspace=indent,eol,start
 set cindent
 set expandtab
 set formatoptions=tcrqn
@@ -10,6 +10,7 @@ set hlsearch
 set ignorecase
 set incsearch
 set mouse=a
+set nojoinspaces
 set number
 set pastetoggle=<F12>
 set ruler
@@ -20,7 +21,7 @@ set smartcase
 set smarttab
 set softtabstop=4
 set tabstop=4
-set vb
+set visualbell
 set wildmenu
 set wildmode=list:longest
 
