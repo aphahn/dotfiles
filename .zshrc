@@ -40,41 +40,16 @@ fg_light_gray=$'%{\e[0;37m%}'
 fg_dark_gray=$'%{\e[1;30m%}'
 fg_light_blue=$'%{\e[1;34m%}'
 fg_light_green=$'%{\e[1;32m%}'
-fg_light_cyan=$'%{\e[1;36m%}' fg_light_red=$'%{\e[1;31m%}'
+fg_light_cyan=$'%{\e[1;36m%}'
+fg_light_red=$'%{\e[1;31m%}'
 fg_light_purple=$'%{\e[1;35m%}'
 fg_no_colour=$'%{\e[0m%}'
 
 fg_white=$'%{\e[1;37m%}'
 fg_black=$'%{\e[0;30m%}'
 
-want_color=true
-
-case "$TERM" in
-xterm)
-    want_color=true
-esac
-
-# if we're in a gnome-terminal, manually set the term
-if [ "$COLORTERM" = "gnome-terminal" ]; then
-    want_color=true
-fi
-
-# set a fancy prompt (non-color, unless we know we "want" color)
-if [ $want_color = true ] ; then
-    #PS1='[%{[01;32m%}%n@%m%{[00m%}:%{[01;35m%}[%T]%{[00m%}:%{[00;34m%}$(abbreviate_paths "%~")%{[00m%}\$ '
-    PS1="[${fg_green}%n${fg_no_colour}@${fg_red}%m${fg_no_colour}:${fg_blue}%~${fg_no_colour}]\$ "
-else
-    PS1='[%n@%m:%~\$ '
-fi
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PROMPT_COMMAND='echo -ne "0;${USER}@${HOSTNAME}: ${PWD/$HOME/~}\007"'
-    ;;
-*)
-    ;;
-esac
+# TODO Make the path the shortest path zsh will expand pwd to?
+PS1="[${fg_green}%n${fg_no_colour}@${fg_red}%m${fg_no_colour}:${fg_blue}%~${fg_no_colour}]\$ "
 
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic
@@ -84,8 +59,11 @@ export VISUAL=vim
 export GREP_OPTIONS="--color"
 export PATH=$PATH:"$HOME/bin"
 export LESS="-i -n -R"
+export CLICOLOR=true
 
-alias ls="ls -G"
+if ls --color=auto >& /dev/null; then
+    alias ls="ls --color=auto"
+fi
 alias la="ls -lA"
 alias lh="la -h"
 alias rf="rm -rf"
