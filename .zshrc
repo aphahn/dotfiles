@@ -72,7 +72,8 @@ alias dl="curl -L -O"
 alias top="top -s 1 -o cpu"
 alias htop="htop -d 10"
 function ss () {
-    ssh -t $1 screen -D -R
+    # Send first arguments as ssh parameters, last argument as host
+    ssh $@[1,$(($# - 1))] -t $@[$#] screen -D -R
 }
 
 ZSHRCLOCAL=~/.zshrclocal
