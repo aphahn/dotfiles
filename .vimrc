@@ -11,7 +11,6 @@ set ignorecase
 set incsearch
 set mouse=a
 set nojoinspaces
-set number
 set pastetoggle=<F12>
 set ruler
 set shiftround
