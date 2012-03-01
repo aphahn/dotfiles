@@ -56,9 +56,10 @@ zle -N self-insert url-quote-magic
 
 export EDITOR=vim
 export VISUAL=vim
+export PAGER=less
+export LESS="-i -n -R"
 export GREP_OPTIONS="--color"
 export PATH=$PATH:"$HOME/bin"
-export LESS="-i -n -R"
 export CLICOLOR=true
 
 if ls --color=auto >& /dev/null; then
