@@ -7,6 +7,8 @@ let g:ctrlp_map='<Leader>t'
 call vundle#rc()
 Bundle 'gmarik/vundle'
 Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'msanders/snipmate.vim'
 
 set autoindent
 set backspace=indent,eol,start

@@ -61,6 +61,7 @@ export LESS="-i -n -R"
 export GREP_OPTIONS="--color"
 export PATH=$PATH:"$HOME/bin"
 export CLICOLOR=true
+export PYTHONIOENCODING=utf-8
 
 if ls --color=auto >& /dev/null; then
     alias ls="ls --color=auto"
