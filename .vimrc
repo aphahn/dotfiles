@@ -30,6 +30,7 @@ set smartcase
 set smarttab
 set softtabstop=4
 set tabstop=4
+set textwidth=79
 set visualbell
 set wildmenu
 set wildmode=list:longest
@@ -58,7 +59,7 @@ nnoremap <C-P> :bp<CR>
 nnoremap <C-S> 1z=
 nnoremap <Leader>w :w<CR>:!./%<CR>
 nnoremap <Tab> ==
-nnoremap <silent> <C-L> :noh<CR>
+nnoremap <silent> <C-L> :nohlsearch<CR>
 
 runtime macros/matchit.vim
 

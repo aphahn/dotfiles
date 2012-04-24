@@ -2,7 +2,6 @@
 
 export LANG="C"
 
-
 zstyle ':completion:*' completer _expand _complete _correct _approximate
 zstyle ':completion:*' expand suffix
 zstyle ':completion:*' insert-unambiguous true
@@ -20,13 +19,15 @@ compinit -C
 # End of lines added by compinstall
 # Lines configured by zsh-newuser-install
 HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
+HISTSIZE=10000
+SAVEHIST=10000
 setopt appendhistory autocd beep extendedglob
 setopt histignoredups
 setopt histignorespace extended_history
 setopt inc_append_history share_history
 # End of lines configured by zsh-newuser-install
+
+bindkey '^R' history-incremental-search-backward
 
 # Some colors:
 fg_green=$'%{\e[0;32m%}'
@@ -73,6 +74,7 @@ alias pgrep="pgrep -l"
 alias dl="curl -L -O"
 alias top="top -s 1 -o cpu"
 alias htop="htop -d 10"
+alias watch="watch -n 1"
 function ss () {
     # Send first arguments as ssh parameters, last argument as host
     ssh $@[1,$(($# - 1))] -t $@[$#] screen -D -R
