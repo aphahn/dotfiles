@@ -30,16 +30,13 @@ set smartcase
 set smarttab
 set softtabstop=4
 set tabstop=4
-set textwidth=79
 set visualbell
 set wildmenu
 set wildmode=list:longest
 
 syntax on
 
-filetype on
-filetype indent on
-filetype plugin on
+filetype plugin indent on
 
 let mapleader=','
 
