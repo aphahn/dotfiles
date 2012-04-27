@@ -15,6 +15,7 @@ set backspace=indent,eol,start
 set cindent
 set expandtab
 set formatoptions=tcrqn
+set gdefault
 set hidden
 set hlsearch
 set ignorecase
