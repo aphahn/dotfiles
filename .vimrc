@@ -32,6 +32,7 @@ set smarttab
 set softtabstop=4
 set tabstop=4
 set visualbell
+set wildignore+=*.swp,*.pyc
 set wildmenu
 set wildmode=list:longest
 
