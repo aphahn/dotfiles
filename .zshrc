@@ -49,8 +49,17 @@ fg_no_colour=$'%{\e[0m%}'
 fg_white=$'%{\e[1;37m%}'
 fg_black=$'%{\e[0;30m%}'
 
-# TODO Make the path the shortest path zsh will expand pwd to?
-PS1="[${fg_green}%n${fg_no_colour}@${fg_red}%m${fg_no_colour}:${fg_blue}%~${fg_no_colour}]\$ "
+# From http://blog.sanctum.geek.nz/bash-prompts/
+function prompt_git {
+    git branch &> /dev/null || return 1
+    HEAD="$(git symbolic-ref HEAD 2> /dev/null)"
+    BRANCH="${HEAD##*/}"
+    [[ -n "$(git status 2> /dev/null | \
+        grep -F 'working directory clean')" ]] || STATUS="!"
+    printf '(%s)' "${BRANCH:-unknown}${STATUS}"
+}
+
+PROMPT="[${fg_green}%n${fg_no_colour}@${fg_red}%m${fg_no_colour}:${fg_blue}%~${fg_no_colour}]\$ "
 
 autoload -U url-quote-magic
 zle -N self-insert url-quote-magic

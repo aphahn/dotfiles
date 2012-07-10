@@ -12,6 +12,7 @@ Bundle 'msanders/snipmate.vim'
 
 set autoindent
 set backspace=indent,eol,start
+set background=dark
 set cindent
 set expandtab
 set formatoptions=tcrqn
