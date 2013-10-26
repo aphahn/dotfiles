@@ -11,6 +11,8 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
+Bundle 'mileszs/ack.vim'
+Bundle 'nvie/vim-flake8'
 
 set autoindent
 set backspace=indent,eol,start
@@ -58,12 +60,24 @@ nnoremap <C-J> <C-E>
 nnoremap <C-K> <C-Y>
 nnoremap <C-N> :bn<CR>
 nnoremap <C-P> :bp<CR>
-nnoremap <C-S> 1z=
+nnoremap <C-Q> :set spell<CR>1z=:set nospell<CR>
 nnoremap <Leader>w :w<CR>:!./%<CR>
 nnoremap <Tab> ==
 nnoremap <silent> <C-L> :nohlsearch<CR>
 
 runtime macros/matchit.vim
+
+function! GitMkSession()
+    let branch=system("git rev-parse --abbrev-ref HEAD")
+    exec 'mksession! ~/.vim/sessions/' . branch
+endfunction
+command! Gmksession :call GitMkSession()
+
+function! GitSource()
+    let branch=system("git rev-parse --abbrev-ref HEAD")
+    exec 'source ~/.vim/sessions/' . branch
+endfunction
+command! Gsource :call GitSource()
 
 let vimrclocal='~.vim/.vimrclocal'
 if filereadable(vimrclocal)

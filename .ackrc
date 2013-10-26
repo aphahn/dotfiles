@@ -1,2 +1,2 @@
 --smart-case
---type-add=css=.less
+--type-set=less=.less
