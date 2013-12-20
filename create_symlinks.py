@@ -6,7 +6,8 @@ import sys
 # Work from wherever we're called
 os.chdir(sys.path[0])
 
-possible_dotfiles = os.listdir('.') + ['.ssh/ssh_config']
+possible_dotfiles = os.listdir('.') + ['.ssh/ssh_config',
+                                       '.config/fish/config.fish']
 
 for filename in possible_dotfiles:
     if filename.startswith('.') and not filename.endswith('.swp'):
