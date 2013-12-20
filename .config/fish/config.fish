@@ -51,5 +51,3 @@ alias dl 'curl -L -O'
 alias top 'top -s 1 -o cpu'
 alias htop 'htop -d 10'
 alias watch 'watch -n 1'
-
-alias prod 'ssh -t judicata@katz.judicata.com searchfe/manage.py shell'
