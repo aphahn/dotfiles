@@ -9,3 +9,5 @@
     email = aphahn@gmail.com
 [core]
 	autocrlf = false
+[merge]
+    tool = vimdiff
