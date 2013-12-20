@@ -1,13 +1,14 @@
+[user]
+    name = Adam Hahn
+    email = aphahn@gmail.com
+[core]
+	autocrlf = false
 [color]
     diff = auto
     status = auto
     branch = auto
     interactive = auto
     ui = auto
-[user]
-    name = Adam Hahn
-    email = aphahn@gmail.com
-[core]
-	autocrlf = false
 [merge]
     tool = vimdiff
+    conflictstyle = diff3
