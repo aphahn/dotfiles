@@ -13,6 +13,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-repeat'
 Bundle 'mileszs/ack.vim'
 Bundle 'nvie/vim-flake8'
+Bundle 'mattn/flappyvird-vim'
 
 set autoindent
 set backspace=indent,eol,start
