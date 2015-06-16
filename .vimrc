@@ -30,6 +30,7 @@ set mouse=a
 set nojoinspaces
 set pastetoggle=<F12>
 set ruler
+set shell=/bin/bash
 set shiftround
 set shiftwidth=4
 set showmatch
