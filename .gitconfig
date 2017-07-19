@@ -2,7 +2,8 @@
     name = Adam Hahn
     email = aphahn@gmail.com
 [core]
-	autocrlf = false
+    autocrlf = false
+    editor = vim
 [color]
     diff = auto
     status = auto

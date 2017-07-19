@@ -43,11 +43,12 @@ set -x LESS '-i -n -R'
 set -x CLICOLOR true
 set -x PYTHONIOENCODING utf-8
 
+alias dl 'curl -L -O'
+alias htop 'htop -d 10'
 alias la 'ls -lA'
 alias lh 'la -h'
-alias rf 'rm -rf'
 alias pgrep 'pgrep -l'
-alias dl 'curl -L -O'
+alias rf 'rm -rf'
+alias rg 'rg --smart-case'
 alias top 'top -s 1 -o cpu'
-alias htop 'htop -d 10'
 alias watch 'watch -n 1'

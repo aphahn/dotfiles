@@ -2,18 +2,19 @@ set nocompatible
 
 " Vundle
 filetype off
-set rtp+=~/.vim/bundle/vundle
+set rtp+=~/.vim/bundle/Vundle.vim
 let g:ctrlp_map='<Leader>t'
-call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'kien/ctrlp.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'msanders/snipmate.vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-repeat'
-Bundle 'mileszs/ack.vim'
-Bundle 'nvie/vim-flake8'
-Bundle 'mattn/flappyvird-vim'
+call vundle#begin()
+Plugin 'gmarik/vundle'
+Plugin 'tpope/vim-fugitive'
+Plugin 'msanders/snipmate.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'mileszs/ack.vim'
+Plugin 'nvie/vim-flake8'
+Plugin 'mattn/flappyvird-vim'
+call vundle#end()
+filetype plugin indent on
 
 set autoindent
 set backspace=indent,eol,start
@@ -44,8 +45,6 @@ set wildmenu
 set wildmode=list:longest
 
 syntax on
-
-filetype plugin indent on
 
 let mapleader=','
 
