@@ -10,9 +10,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
-Plugin 'mileszs/ack.vim'
 Plugin 'nvie/vim-flake8'
-Plugin 'mattn/flappyvird-vim'
 call vundle#end()
 filetype plugin indent on
 
