@@ -10,14 +10,15 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'msanders/snipmate.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-unimpaired'
 Plugin 'nvie/vim-flake8'
+Plugin 'samoshkin/vim-mergetool'
 call vundle#end()
 filetype plugin indent on
 
 set autoindent
 set backspace=indent,eol,start
 set background=dark
-set cindent
 set expandtab
 set formatoptions=tcrqn
 set gdefault
@@ -28,6 +29,7 @@ set incsearch
 set mouse=a
 set nojoinspaces
 set pastetoggle=<F12>
+set regexpengine=2
 set ruler
 set shell=/bin/bash
 set shiftround
@@ -36,6 +38,7 @@ set showmatch
 set smartcase
 set smarttab
 set softtabstop=4
+set spelllang=en_us
 set tabstop=4
 set visualbell
 set wildignore+=*.swp,*.pyc
@@ -43,6 +46,8 @@ set wildmenu
 set wildmode=list:longest
 
 syntax on
+
+colorscheme desert
 
 let mapleader=','
 

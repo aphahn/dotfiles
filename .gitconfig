@@ -1,15 +1,40 @@
 [user]
     name = Adam Hahn
     email = aphahn@gmail.com
+[alias]
+    diff-lfs = -c diff.lfs.textconv=cat diff
 [core]
     autocrlf = false
     editor = vim
+    fsmonitor = true
 [color]
     diff = auto
     status = auto
     branch = auto
     interactive = auto
     ui = auto
+[commit]
+   verbose = true
+[diff]
+   colorMoved = true
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[help]
+   autoCorrect = prompt
+[init]
+	defaultBranch = main
 [merge]
-    tool = vimdiff
+    tool = vim_mergetool
     conflictstyle = diff3
+[mergetool]
+   keepBackup = false
+[mergetool "vim_mergetool"]
+   cmd = vim -f -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
+   trustExitCode = true
+[pull]
+   ff = only
+[remote "origin"]
+   prune = true

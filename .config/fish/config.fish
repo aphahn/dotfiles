@@ -33,3 +33,7 @@ alias lh 'la -h'
 alias pgrep 'pgrep -l'
 alias rf 'rm -rf'
 alias watch 'watch -n 1'
+alias htop 'htop -d 10'
+alias rg 'rg --smart-case'
+
+fish_add_path "$HOME/bin"
