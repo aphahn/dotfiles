@@ -9,17 +9,6 @@ function chrome
     open -a "Google Chrome" $argv[1]
 end
 
-function gerrit-clean
-    for branch in (git for-each-ref --format='%(refname:short)' refs/heads/);
-        set changeid (git log $branch|ack -1 Change-Id)
-        if git log master|ack -1 $changeid > /dev/null;
-            if [ "$branch" != "master" ];
-                git branch -D "$branch"
-            end
-        end
-    end
-end
-
 set -x EDITOR vim
 set -x VISUAL vim
 set -x PAGER less
@@ -37,3 +26,7 @@ alias htop 'htop -d 10'
 alias rg 'rg --smart-case'
 
 fish_add_path "$HOME/bin"
+
+if test -e "$HOME/.config/fish/local.fish"
+    source "$HOME/.config/fish/local.fish"
+end

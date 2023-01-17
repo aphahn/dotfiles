@@ -1,0 +1,13 @@
+{{ if eq .chezmoi.os "darwin" -}}
+#!/bin/bash
+
+# Check if `brew` command exists...
+if ! command -v brew &> /dev/null
+then
+    # If not, install brew.
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+fi
+
+# Install Brewfile requirements.
+brew bundle --global
+{{ end -}}

@@ -1,6 +1,3 @@
-[user]
-    name = Adam Hahn
-    email = aphahn@gmail.com
 [alias]
     diff-lfs = -c diff.lfs.textconv=cat diff
 [core]
@@ -38,3 +35,6 @@
     ff = only
 [remote "origin"]
     prune = true
+[user]
+    name = Adam Hahn
+    email = {{ .email | quote }}
