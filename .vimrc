@@ -1,20 +1,18 @@
 set nocompatible
 
-" Vundle
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-let g:ctrlp_map='<Leader>t'
-call vundle#begin()
-Plugin 'gmarik/vundle'
-Plugin 'tpope/vim-fugitive'
-Plugin 'msanders/snipmate.vim'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'nvie/vim-flake8'
-Plugin 'samoshkin/vim-mergetool'
-call vundle#end()
-filetype plugin indent on
+let data_dir = '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
+
+call plug#begin()
+Plug 'samoshkin/vim-mergetool'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+call plug#end()
 
 set autoindent
 set backspace=indent,eol,start
@@ -45,8 +43,6 @@ set wildignore+=*.swp,*.pyc
 set wildmenu
 set wildmode=list:longest
 
-syntax on
-
 colorscheme desert
 
 let mapleader=','
@@ -70,20 +66,3 @@ nnoremap <Tab> ==
 nnoremap <silent> <C-L> :nohlsearch<CR>
 
 runtime macros/matchit.vim
-
-function! GitMkSession()
-    let branch=system("git rev-parse --abbrev-ref HEAD")
-    exec 'mksession! ~/.vim/sessions/' . branch
-endfunction
-command! Gmksession :call GitMkSession()
-
-function! GitSource()
-    let branch=system("git rev-parse --abbrev-ref HEAD")
-    exec 'source ~/.vim/sessions/' . branch
-endfunction
-command! Gsource :call GitSource()
-
-let vimrclocal='~.vim/.vimrclocal'
-if filereadable(vimrclocal)
-    exec 'source ' . vimrclocal
-endif
