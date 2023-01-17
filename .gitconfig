@@ -14,27 +14,27 @@
     interactive = auto
     ui = auto
 [commit]
-   verbose = true
+    verbose = true
 [diff]
-   colorMoved = true
+    colorMoved = true
 [filter "lfs"]
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-	clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+    clean = git-lfs clean -- %f
 [help]
-   autoCorrect = prompt
+    autoCorrect = prompt
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [merge]
     tool = vim_mergetool
     conflictstyle = diff3
 [mergetool]
-   keepBackup = false
+    keepBackup = false
 [mergetool "vim_mergetool"]
-   cmd = vim -f -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
-   trustExitCode = true
+    cmd = vim -f -c "MergetoolStart" "$MERGED" "$BASE" "$LOCAL" "$REMOTE"
+    trustExitCode = true
 [pull]
-   ff = only
+    ff = only
 [remote "origin"]
-   prune = true
+    prune = true
