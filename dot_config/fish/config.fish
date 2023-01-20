@@ -9,6 +9,11 @@ function chrome
     open -a "Google Chrome" $argv[1]
 end
 
+function mcd
+    mkdir -p $argv[1]
+    cd $argv[1]
+end
+
 set -x EDITOR vim
 set -x VISUAL vim
 set -x PAGER less
@@ -25,6 +30,7 @@ alias watch 'watch -n 1'
 alias htop 'htop -d 10'
 alias rg 'rg --smart-case'
 
+fish_add_path /opt/homebrew/bin
 fish_add_path "$HOME/bin"
 
 if test -e "$HOME/.config/fish/local.fish"
