@@ -14,12 +14,13 @@ function mcd
     cd $argv[1]
 end
 
-set -x EDITOR vim
-set -x VISUAL vim
-set -x PAGER less
-set -x LESS '-i -n -R'
 set -x CLICOLOR true
+set -x EDITOR vim
+set -x LESS '-i -n -R'
+set -x PAGER less
 set -x PYTHONIOENCODING utf-8
+set -x SSH_AUTH_SOCK "$HOME/Library/Group Containers/2BUA8C4S2C.com.1password/t/agent.sock"
+set -x VISUAL vim
 
 alias dl 'curl -L -O'
 alias la 'ls -lA'
