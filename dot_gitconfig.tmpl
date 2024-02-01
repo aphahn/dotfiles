@@ -1,5 +1,9 @@
 [alias]
     diff-lfs = -c diff.lfs.textconv=cat diff
+    files-changed = diff @{upstream}...
+    start = "!f() { \
+                git switch main && git pull && git switch -t -c \"aphahn/$1\"; \
+             }; f"
 [core]
     autocrlf = false
     editor = vim

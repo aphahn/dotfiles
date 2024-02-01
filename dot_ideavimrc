@@ -1,3 +1,12 @@
 source ~/.vimrc
 
 set ideajoin
+
+nmap ]e <Action>(GotoNextError)
+nmap [e <Action>(GotoPreviousError)
+nmap gh <Action>(ShowHoverInfo)
+nmap <Leader>p <Action>(ParameterInfo)
+nmap <Leader>r <Action>(Refactorings.QuickListPopupAction)
+nmap <Leader>s <Action>(ShowUsages)
+nmap <Leader>u <Action>(FindUsages)
+nmap <Leader>x <Action>(HideAllWindows)
