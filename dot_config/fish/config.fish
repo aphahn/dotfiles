@@ -14,6 +14,11 @@ function mcd
     cd $argv[1]
 end
 
+function wordmedia
+    # Extract all Word media to a directory.
+    unzip -j $argv[1] "word/media/*" -d (path change-extension '' $argv[1])
+end
+
 set -x CLICOLOR true
 set -x EDITOR vim
 set -x LESS '-i -n -R'
