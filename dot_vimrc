@@ -43,8 +43,6 @@ set wildignore+=*.swp,*.pyc
 set wildmenu
 set wildmode=list:longest
 
-colorscheme desert
-
 let mapleader=','
 
 map Y y$
