@@ -35,9 +35,11 @@ alias rf 'rm -rf'
 alias watch 'watch -n 1'
 alias htop 'htop -d 10'
 alias rg 'rg --smart-case'
+alias sortnr 'sort|uniq -c|sort -nr'
 
 fish_add_path /opt/homebrew/bin
 fish_add_path "$HOME/bin"
+fish_add_path "$HOME/.local/bin"
 
 if test -e "$HOME/.config/fish/local.fish"
     source "$HOME/.config/fish/local.fish"
