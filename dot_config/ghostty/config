@@ -10,3 +10,4 @@ keybind = cmd+up=goto_split:top
 keybind = cmd+down=goto_split:bottom
 keybind = cmd+left=goto_split:left
 keybind = cmd+right=goto_split:right
+keybind = global:opt+grave_accent=toggle_quick_terminal
