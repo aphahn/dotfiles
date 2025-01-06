@@ -33,7 +33,6 @@ alias lh 'la -h'
 alias pgrep 'pgrep -l'
 alias rf 'rm -rf'
 alias watch 'watch -n 1'
-alias htop 'htop -d 10'
 alias rg 'rg --smart-case'
 alias sortnr 'sort|uniq -c|sort -nr'
 
