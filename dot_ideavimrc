@@ -2,6 +2,8 @@ source ~/.vimrc
 
 set ideajoin
 
+nmap ]d <Action>(NextDiff)
+nmap [d <Action>(PreviousDiff)
 nmap ]e <Action>(GotoNextError)
 nmap [e <Action>(GotoPreviousError)
 nmap gh <Action>(ShowHoverInfo)
