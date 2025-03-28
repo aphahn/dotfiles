@@ -29,7 +29,6 @@ set nojoinspaces
 set pastetoggle=<F12>
 set regexpengine=2
 set ruler
-set shell=/bin/bash
 set shiftround
 set shiftwidth=4
 set showmatch
@@ -52,7 +51,6 @@ inoremap <C-K> <C-O><C-E>
 inoremap <C-L> <Esc>
 inoremap <C-Space> <C-X><C-O>
 
-nnoremap / /\v
 nnoremap ; :
 nnoremap <C-J> <C-E>
 nnoremap <C-K> <C-Y>
